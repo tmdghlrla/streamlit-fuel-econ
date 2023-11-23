@@ -18,7 +18,7 @@ def main() :
 
     choice = st.selectbox('컬럼선택', df.columns)
     count=df[choice].dropna().nunique()
-    st.text('{} 컬럼의 중복 제한 데이터의 갯수는 {}개 입니다.'.format(choice, count))
+    st.text('{} 컬럼의 중복 제거한 데이터의 갯수는 {}개 입니다.'.format(choice, count))
 
     selected_list=st.multiselect('두개 이상의 컬럼을 선택하세요', options=df.columns[8:],max_selections=2)
 
